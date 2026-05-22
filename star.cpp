@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int rows, i, j, choice;
+    cout << "******** STAR PATTERN PROGRAM ********" << endl;
+    cout << "1. Right Triangle" << endl;
+    cout << "2. Square Pattern" << endl;
+    cout << "3. Pyramid Pattern" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    cout << "Enter number of rows: ";
+    cin >> rows;
+    if(choice == 1){
+        cout << "Right Triangle Pattern" << endl;
+        for(i = 1; i <= rows; i++){
+            for(j = 1; j <= i; j++){
+                cout << "* ";
+            }
+            cout << endl;
+        }
+    }
+    else if(choice == 2){
+        cout << "Square Pattern" << endl;
+        for(i = 1; i <= rows; i++){
+            for(j = 1; j <= rows; j++){
+                cout << "* ";
+            }
+            cout << endl;
+        }
+    }
+    else if(choice == 3){
+        cout << "Pyramid Pattern" << endl;
+        for(i = 1; i <= rows; i++){
+            for(j = 1; j <= rows - i; j++){
+                cout << " ";
+            }
+            for(j = 1; j <= i; j++){
+                cout << "* ";
+            }
+            cout << endl;
+        }
+    }
+    else{
+        cout << "Invalid Choice" << endl;
+    }
+    cout << "Program Ended Successfully" << endl;
+    return 0;
+}
